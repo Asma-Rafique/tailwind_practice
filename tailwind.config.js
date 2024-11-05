@@ -7,12 +7,21 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        'custom-xl': '40px',
+        'custom-xxl':['64px' ,{ lineHeight: '77px', fontWeight: '700' }],
+        'custom-xl':['48px' ,{ lineHeight: '58px', fontWeight: '800' }],
+        'custom-l': '40px',
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],
         // san:['Work' ,'Sans'],
       },
+      borderRadius:{
+        'custom-radius': '32px',
+      },
+      lineHeight:{
+        'custom-h':'58px',
+      },
+
       colors: {
         bg: '#FFFFFF',
         primary: {

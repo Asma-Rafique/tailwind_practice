@@ -9,27 +9,66 @@
     <title>Vite + React</title>
   </head>
   <body>
-    <header class="fixed top-0 left-0 right-0 bg-white border-b border-gray-300 h-20">
+    <!-- <header class="fixed top-0 left-0 right-0 bg-white border-b border-gray-300">
       <nav class="w-full">
-        <div class="container max-w-[1440px] h-11 m-auto px-20 pt-3">
+        <div class="container max-w-[1440px] m-auto px-20 pt-3 pb-3">
           <div class="flex justify-between items-center">
             <div class="overflow-hidden max-w-[37.7px]">
               <img src="./src/assets/images/Logo.svg" alt="logo">
             </div>
-            <div class="text-sm flex justify-center items-center gap-4 ">
+            <div class="text-sm font-normal flex justify-center items-center gap-6 ">
               <a href="" class="text-black no-underline">About us</a>
               <a href="" class="text-black no-underline">Our Process</a>
               <a href="" class="text-black no-underline">Testimonials</a>
               <a href="" class="text-black no-underline">FAQs</a>
-              <div class="text-base space-x-4 pl-5 rounded-full bg-[#EBFAE7]">
-                <span class=" px-2 py-2">Become a farmer</span>
-                <button class=" px-5 py-3 text-white bg-black rounded-full">Login</button>
+              <div class="text-base pl-4 rounded-custom-radius bg-primary-50 ">
+                <span class=" px-5 py-3 text-primary-600 text-base font-semibold">Become a farmer</span>
+                <button class="text-base font-semibold px-5 py-3 text-white bg-black rounded-full">Login</button>
+              </div>
             </div>
+          </div>
+        </div>
+      </nav>
+    </header> -->
+    
+    <header class="fixed top-0 left-0 right-0 bg-white border-b border-gray-300">
+      <nav class="w-full">
+        <div class="container max-w-[1440px] m-auto px-8 md:px-20 pt-3 pb-3">
+          <div class="flex justify-between items-center">
+            <!-- Logo -->
+            
+              <div class="overflow-hidden max-w-[37.7px] ">
+                <img src="./src/assets/images/Logo.svg" alt="logo">
+              </div>
+      
+              <!-- Toggle Button with Hidden Checkbox for Mobile Menu -->
+
+              <input type="checkbox" id="menu-toggle" class="hidden">
+              <label  for="menu-toggle" class="fixed scroll-pl-96 cursor-pointer md:hidden text-black">
+                <!-- Icon for toggle -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </label>
+            
+
+            <!-- Menu Links -->
+            <div class="hidden md:flex text-sm font-normal justify-center items-center gap-6 md:gap-6" id="menu">
+              <a href="#" class="text-black no-underline md:mt-0">About us</a>
+              <a href="#" class="text-black no-underline md:mt-0">Our Process</a>
+              <a href="#" class="text-black no-underline md:mt-0">Testimonials</a>
+              <a href="#" class="text-black no-underline md:mt-0">FAQs</a>
+    
+              <div class="flex flex-col md:flex-row items-center md:items-center mt-4 md:mt-0 space-y-2 md:space-y-0">
+                <span class="px-5 py-3 bg-primary-50 text-primary-600 text-base font-semibold rounded-lg md:rounded-none">Become a farmer</span>
+                <button class="text-base font-semibold px-5 py-3 text-white bg-black rounded-full">Login</button>
+              </div>
             </div>
           </div>
         </div>
       </nav>
     </header>
+    
     <!-- hero section  -->
 
     <section class="bg-primary-50 w-full">
@@ -37,42 +76,40 @@
           <div class="flex flex-wrap items-center pt-20">
               <div class="flex flex-col space-y-10 flex-1">
                   <div class="flex flex-col space-y-3 items-start gap-3">
-                      <div class="bg-primary-200 text-center font-bold text-lg text-primary-600 max-w-48 py-2 px-4 rounded-full">
+                      <div class="bg-primary-200 text-center font-bold text-lg text-primary-600 py-2 px-4 rounded-full">
                           <p>Welcome to Valce</p>
                       </div>
-                      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold">Where is the beef...<br>From?</h1>
+                      <h1 class="text-3xl md:text-5xl lg:text-custom-xxl">Where's the beef...<br>From?</h1>
                       <div class="text-left text-gray-600">
-                          <p class="text-sm md:text-base lg:text-lg ">Vlace connects you to meat, and lots of it: Our platform is the link between local farmers offering custom beef and pork in bulk processed by local butchers, and the consumer hungering for knowledge about where their meat is coming from.</p>
+                          <p class="text-sm md:text-base lg:text-base ">Vlace connects you to meat, and lots of it: Our platform is the link between local farmers offering custom beef and pork in bulk processed by local butchers, and the consumer hungering for knowledge about where their meat is coming from.</p>
                       </div>
                   </div>
-                  <div class="flex space-x-4 px-4 py-3 bg-white border border-gray-300 shadow-sm rounded-lg">
+                  <div class="flex space-x-4 px-5 py-3 bg-white border border-gray-300 shadow-sm rounded-lg">
                       <input type="text" placeholder="Find your meat" class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-400" />
-                      <button class="bg-primary-500 text-black px-4 py-2 rounded-full">Find Meats</button>
+                      <button class="text-base font-bold bg-primary-500 text-black px-5 rounded-full">Find Meats</button>
                   </div>
               </div>
-              <div class="flex-1 max-w-[728px] mx-auto">
-                  <img src="./src/assets/images/heroImage-CX1eNSFs (1).png" alt="hero image" class="w-full">
+              <div class="flex-1 basis-1\2 max-w-[728px]">
+                  <img src="./src/assets/images/Imgpanda 3.png" alt="hero image">
               </div>
           </div>
       </div>
   </section>
   <!-- about section  -->
    <section class="">
-    <div class=" container px-20 py-20 max-w-[1440px]  m-auto ">
+    <div class=" container px-20 py-20 max-w-[1440px] m-auto ">
       <div class="flex gap-16 items-center px-20  ">
-        <div class="">
-          <img class="max-w-[517px]" src="./src/assets/images/about_img.svg" alt="about section ">
+        <div class=" max-w-[517px]">
+          <img class="" src="./src/assets/images/imagery.svg" alt="about section ">
         </div>
-        <div>
-          <div class="bg-primary-200 text-center font-bold text-lg text-primary-600 max-w-48 py-2 px-4 rounded-full mb-8">
+        <div class="flex flex-col items-start gap-3 flex-1 ">
+          <div class="bg-primary-200 text-center font-bold text-lg text-primary-600 py-2 px-4 rounded-full w-fit">
             About Us 
           </div>
-          <div class="flex flex-col items-start gap-3">
-            <h2 class="text-3xl md:text-5xl lg:text-5xl font-bold">Quality Meat from Farm to Table</h2>
-            <div class="text-left text-gray-600">
-              <p class="text-sm md:text-base text-gray-500 lg:text-lg leading-6 not-italic font-medium" >At Vlace, we're passionate about connecting people with premium quality bulk beef and pork sourced locally from small family farms and butcher shops.  In doing so - we will unveil the source of our food so the customer knows where it came from, just how it used to be.</p>
-              <p class="text-sm md:text-base lg:text-lg">Our platform was created to share our passion for a superior way to buy meat—locally and in bulk. This approach offers a convenient, high-quality, and valuable source of protein</p>
-          </div>
+          <h2 class="text-3xl md:text-5xl lg:text-custom-xl">Quality Meat from Farm to Table</h2>
+          <div class="text-left text-gray-600">
+            <p class="text-sm md:text-base text-gray-500 lg:text-lg leading-6 font-medium" >At Vlace, we're passionate about connecting people with premium quality bulk beef and pork sourced locally from small family farms and butcher shops.  In doing so - we will unveil the source of our food so the customer knows where it came from, just how it used to be.</p>
+            <p class="text-sm md:text-base lg:text-lg">Our platform was created to share our passion for a superior way to buy meat—locally and in bulk. This approach offers a convenient, high-quality, and valuable source of protein</p>
           </div>
         </div>
       </div>
@@ -322,6 +359,16 @@
      </div>
     </div>  
   </section>
+  <style>
+    /* Additional CSS to show/hide the menu based on the checkbox state */
+#menu-toggle:checked ~ #menu {
+  display: flex; /* Menu appears when the checkbox is checked */
+  flex-direction: column;
+justify-items: center;
+
+}
+
+  </style>
 </body>
 </html>
 
