@@ -12,27 +12,56 @@
     <header class="fixed top-0 left-0 right-0 bg-white border-b border-gray-300">
       <nav class="w-full">
         <div class="container max-w-[1440px] m-auto px-20 pt-3 pb-3">
-          <div class="flex justify-between items-center flex-col gap-6 laptop:flex-row ">
+          <div class="flex justify-between items-center">
+            <!-- Logo -->
             <div class="overflow-hidden max-w-[37.7px]">
               <img src="./src/assets/images/Logo.svg" alt="logo">
             </div>
-            <div class="text-sm font-normal flex justify-center items-center gap-6  flex-col laptop:flex-row ">
-              <a href="" class="text-black no-underline">About us</a>
-              <a href="" class="text-black no-underline">Our Process</a>
-              <a href="" class="text-black no-underline">Testimonials</a>
-              <a href="" class="text-black no-underline">FAQs</a>
+    
+            <!-- Toggle Button for Mobile Menu -->
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="cursor-pointer laptop:hidden text-black">
+              <!-- Icon for toggle -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </label>
+    
+            <!-- Desktop Menu Links -->
+            <div class="hidden laptop:flex text-sm font-normal justify-center items-center gap-6" id="menu">
+              <a href="#" class="text-black no-underline  transition-transform duration-200 ease-in-out hover:text-primary-600 hover:scale-105 hover:shadow-lg">About us</a>
+              <a href="#" class="text-black no-underline transition-transform duration-200 ease-in-out hover:text-primary-700 hover:scale-105 hover:shadow-lg">Testimonials</a>
+              <a href="#" class="text-black no-underline transition-transform duration-200 ease-in-out hover:text-primary-700 hover:scale-105 hover:shadow-lg">FAQs</a>
+              <a href="#" class="text-black no-underline transition-transform duration-200 ease-in-out hover:text-primary-700 hover:scale-105 hover:shadow-lg">Our Process</a>
               <div class="text-base pl-4 rounded-custom-radius bg-primary-50 ">
-                <span class=" px-5 py-3 text-primary-600 text-base font-semibold">Become a farmer</span>
+                <span class="px-5 py-3 text-primary-600 text-base font-semibold">Become a farmer</span>
                 <button class="text-base font-semibold px-5 py-3 text-white bg-black rounded-full">Login</button>
               </div>
             </div>
           </div>
+    
+          <!-- Mobile Menu Links -->
+          <div class="laptop:hidden absolute top-full left-0 w-full bg-white border-t border-gray-300 pt-4 pb-4 hidden" id="mobile-menu">
+            <a href="#" class="block text-black no-underline py-2 px-4  transition-transform duration-200 ease-in-out hover:text-primary-700 hover:scale-105 hover:shadow-lg">About us</a>
+            <a href="#" class="block text-black no-underline py-2 px-4 transition-transform duration-200 ease-in-out hover:text-primary-700 hover:scale-105 hover:shadow-lg">Our Process</a>
+            <a href="#" class="block text-black no-underline py-2 px-4 transition-transform duration-200 ease-in-out hover:text-primary-700 hover:scale-105 hover:shadow-lg">Testimonials</a>
+            <a href="#" class="block text-black no-underline py-2 px-4 transition-transform duration-200 ease-in-out hover:text-primary-700 hover:scale-105 hover:shadow-lg">FAQs</a>
+            <div class="text-base py-3 px-4 bg-primary-50">
+              <span class="px-5 py-3 text-primary-600 text-base font-semibold">Become a farmer</span>
+              <button class="text-base font-semibold px-5 py-3 text-white bg-black rounded-full">Login</button>
+            </div>
+          </div>
         </div>
       </nav>
-    </header> 
-    
+    </header>
 
-    
+    <script>
+      // Toggle visibility of the mobile menu based on checkbox
+      document.getElementById('menu-toggle').addEventListener('change', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden', !this.checked);
+      });
+    </script>
     <!-- hero section  -->
     <section class="bg-primary-50 w-full">
       <div class="container max-w-[1440px]  m-auto px-20">
@@ -324,16 +353,6 @@
      </div>
     </div>  
   </section>
-  <style>
-    /* Additional CSS to show/hide the menu based on the checkbox state */
-#menu-toggle:checked ~ #menu {
-  display: flex; /* Menu appears when the checkbox is checked */
-  flex-direction: column;
-justify-items: center;
-
-}
-
-  </style>
 </body>
 </html>
 
