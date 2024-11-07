@@ -55,13 +55,6 @@
       </nav>
     </header>
 
-    <script>
-      // Toggle visibility of the mobile menu based on checkbox
-      document.getElementById('menu-toggle').addEventListener('change', function () {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden', !this.checked);
-      });
-    </script>
     <!-- hero section  -->
     <section class="bg-primary-50 w-full">
       <div class="container max-w-[1440px]  m-auto px-20">
@@ -353,6 +346,13 @@
      </div>
     </div>  
   </section>
+  <script>
+    // Toggle visibility of the mobile menu based on checkbox
+    document.getElementById('menu-toggle').addEventListener('change', function () {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden', !this.checked);
+    });
+  </script>
 </body>
 </html>
 
