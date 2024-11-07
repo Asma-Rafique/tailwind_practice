@@ -6,14 +6,31 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'below-1100':'1100px',
+
+        'mobile':{'max': '575px'},
+        'tablet': '768px',
+        // => @media (min-width: 640px) { ... }
+  
+        'laptop': '992px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
       fontSize: {
+        'responsive-xl': 'calc(1.5rem + 1vw)',
         'custom-xxl':['64px' ,{ lineHeight: '77px', fontWeight: '700' }],
         'custom-xl':['48px' ,{ lineHeight: '58px', fontWeight: '800' }],
-        'custom-l': '40px',
+        'custom-l': ['40px' ,{ lineHeight: '48px', fontWeight: '800' }],
       },
       fontFamily: {
         sans: ['Manrope', 'sans-serif'],
         // san:['Work' ,'Sans'],
+      },
+      height:{
+        'testinomial-h':'390px'
       },
       borderRadius:{
         'custom-radius': '32px',
@@ -21,7 +38,9 @@ export default {
       lineHeight:{
         'custom-h':'58px',
       },
-
+      padding:{
+        'padding-left':'600px'
+      },
       colors: {
         bg: '#FFFFFF',
         primary: {
